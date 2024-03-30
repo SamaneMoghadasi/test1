@@ -1,0 +1,4089 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.css">
+    <link rel="stylesheet" href="assets/vendor/owl/assets/owl.carousel.css">
+    <link rel="stylesheet" href="assets/vendor/owl/assets/owl.theme.default.css">
+    <style>
+        @font-face {
+            font-family: iranyekan;
+            font-style: normal;
+            font-weight: bold;
+            src: url('assets/fonts/iranyekan/IRANYekanWebExtraBold.woff2');
+
+        }
+
+        @font-face {
+            font-family: iranyekan;
+            font-style: normal;
+            font-weight: 100;
+            src: url('assets/fonts/iranyekan/IRANYekanWebThin.woff2');
+
+        }
+
+        @font-face {
+            font-family: iranyekan;
+            font-style: normal;
+            font-weight: 300;
+            src: url('assets/fonts/iranyekan/IRANYekanWebLight.woff2');
+
+        }
+
+        @font-face {
+            font-family: iranyekan;
+            font-style: normal;
+            font-weight: normal;
+            src: url('assets/fonts/iranyekan/IRANYekanWebRegular.woff2');
+
+        }
+
+        @font-face {
+            font-family: iranyekan;
+            font-style: normal;
+            font-weight: 500;
+            src: url('../fonts/eot/iranyekanwebmedium.eot');
+
+        }
+
+        @font-face {
+            font-family: iranyekan;
+            font-style: normal;
+            font-weight: 800;
+            src: url('assets/fonts/iranyekan/IRANYekanWebExtraBold.woff2');
+
+        }
+
+
+
+        @font-face {
+            font-family: iranyekan;
+            font-style: normal;
+            font-weight: 900;
+            src: url('assets/fonts/iranyekan/IRANYekanWebExtraBlack.woff2');
+
+        }
+
+
+        a,
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        span {
+            font-family: iranyekan;
+        }
+
+
+        nav {
+            background-color: khaki;
+            width: 100%;
+        }
+
+        nav>div:first-child {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            background-color: khaki;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+        }
+
+        nav>div:first-child .searchs {
+            display: flex;
+            background-color: khaki;
+            width: 50%;
+            flex-direction: row;
+            justify-content: right;
+            align-items: center;
+            padding: 28px;
+            gap: 40px;
+        }
+
+        nav>div:first-child .searchs a {
+            width: 150px;
+            font-size: 22px;
+            font-weight: 800;
+            color: black;
+            text-decoration: none;
+            font-family: iranyekan;
+        }
+
+
+        /* .searchs .name {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            font-family: iranyekan;
+            font-weight: 600;
+            font-size: 18px;
+            width: 100px;
+        } */
+
+        .search {
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            height: 50px;
+            width: 80%;
+
+        }
+
+        /* .search a {
+            color: white;
+            font-size: x-small;
+            margin-top: 6px;
+        } */
+
+        .magnify {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(17, 33, 55, 1);
+            width: 50px;
+            height: 50px;
+            border-radius: 40px 0 0 40px;
+
+        }
+
+        nav>div:first-child .searchs .magnify i {
+            color: white;
+        }
+
+        .search select {
+            font-family: iranyekan;
+            font-weight: 400;
+            font-size: 12px;
+            outline: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 80px;
+            height: 50px;
+            margin: 0;
+            border: none;
+        }
+
+        .search input {
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding-right: 20px;
+            font-family: iranyekan;
+            font-weight: 400;
+            font-size: xx-small;
+            width: 100%;
+            height: 50px;
+            outline: none;
+            border: none;
+            margin: 0;
+            border-radius: 0 40px 40px 0;
+            font-size: 16px;
+
+        }
+
+        nav>div:first-child .aykon {
+            width: 50%;
+            display: flex;
+            flex-direction: row;
+            background-color: khaki;
+            justify-content: left;
+            align-items: center;
+            padding-left: 12px;
+        }
+
+        nav>div:first-child .aykon .store {
+            width: 25%;
+            display: flex;
+            flex-direction: row;
+            background-color: khaki;
+            gap: 8px;
+            justify-content: center;
+            align-items: center;
+            padding-top: 12px;
+            padding-left: 24px;
+            padding-bottom: 12px;
+            font-family: iranyekan;
+        }
+
+        nav>div:first-child .aykon .store .store1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: iranyekan;
+        }
+
+        nav>div:first-child .aykon .store i {
+            padding: 12px;
+            border: 1px solid black;
+            border-radius: 50%;
+            transition: all 0.5s;
+        }
+
+        nav>div:first-child .aykon .store i:hover {
+            background-color: gray;
+            color: white;
+        }
+
+        nav>div:first-child .aykon .store .store1-1 {
+            display: flex;
+            font-size: 13px;
+            justify-content: center;
+            align-items: center;
+            justify-content: center;
+            align-items: center;
+            background-color: khaki;
+            font-family: iranyekan;
+
+        }
+
+        nav>div:first-child .aykon .store .store1-2 {
+            display: flex;
+            font-size: 16px;
+            justify-content: center;
+            align-items: center;
+            font-family: iranyekan;
+
+        }
+
+        nav>div:nth-child(2) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: khaki;
+            padding-left: 40px;
+            padding-right: 40px;
+            padding-top: 0;
+
+
+
+        }
+
+        nav>div:nth-child(2)>div:first-child {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+        }
+
+        nav>div:nth-child(2)>div:first-child a {
+            color: black;
+            font-size: 18px;
+            /* font-size: iranyekan; */
+            /* font-weight: 200; */
+        }
+
+
+        nav>div:nth-child(2)>div:first-child ul {
+            display: flex;
+            flex-direction: row;
+            /* background-color: aqua; */
+            list-style-type: none;
+            justify-content: right;
+            align-items: baseline;
+            padding: 8px;
+            margin: 0;
+            gap: 56px;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            stroke: gray;
+            margin-left: 120px;
+            font-size: 14px;
+            font-family: iranyekan;
+
+        }
+
+        nav>div:nth-child(2)>div:nth-child(2) ul {
+            display: flex;
+            flex-direction: row;
+            list-style-type: none;
+            justify-content: left;
+            font-size: 14px;
+            font-family: iranyekan;
+            padding: 0;
+            margin: 0;
+            gap: 28px;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            stroke: gray;
+        }
+
+        #hero {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 16px;
+            background-color: lightgray;
+            height: 400px;
+            padding-top: 24px;
+        }
+
+        #hero>div:first-child {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 73%;
+            height: 100%;
+            background-color: white;
+            border-radius: 8px;
+            gap: 16px;
+        }
+
+        #hero>div:first-child div img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        #hero>div:first-child>div:first-child {
+            width: 150px;
+            height: 200px;
+            background-color: white;
+        }
+
+        #hero>div:first-child>div:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #hero>div:first-child>div:nth-child(2) a:nth-of-type(1) {
+            font-size: 32px;
+            font-family: iranyekan;
+            font-weight: 700;
+            padding-bottom: 12px;
+
+        }
+
+        #hero>div:first-child>div:nth-child(2) a:nth-of-type(1):hover {
+            color: khaki;
+
+        }
+
+        #hero>div:first-child>div:nth-child(2) a:nth-of-type(2) {
+            font-size: 16px;
+            padding-bottom: 36px;
+
+
+        }
+
+        #hero>div:first-child>div:nth-child(2) div {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            font-size: 10px;
+            font-family: iranyekan;
+            width: 120px;
+            height: 50px;
+            background-color: khaki;
+            border-radius: 8px;
+            cursor: pointer;
+
+
+
+        }
+
+        #hero>div:last-child {
+            width: 23%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            background-color: lightgray;
+            height: 100%;
+            gap: 16px;
+
+        }
+
+        #hero>div:last-child>div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 50%;
+            background-color: white;
+            border-radius: 8px;
+            gap: 24px;
+        }
+
+        #hero>div:last-child>div>div:first-child {
+            width: 50px;
+            height: 70px;
+            background-color: white;
+
+        }
+
+        #hero>div:last-child>div>div:first-child img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        #hero>div:last-child>div>div:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #hero>div:last-child>div>div:nth-child(2) a:nth-of-type(1) {
+            font-size: 12px;
+            padding-bottom: 12px;
+
+        }
+
+        #hero>div:last-child>div>div:nth-child(2) a:nth-of-type(2) {
+            font-size: 24px;
+            font-weight: 700;
+            padding-bottom: 12px;
+
+        }
+
+
+
+
+
+        #hero-after {
+            /* margin-top: 18px; */
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 16px;
+            background-color: lightgray;
+            padding-top: 18px;
+            /* height: 200px; */
+
+        }
+
+        #hero-after>div:first-child {
+            width: 73%;
+            /* height: 200px; */
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            /* align-items: center; */
+            gap: 16px;
+        }
+
+        #hero-after>div:first-child>div {
+            background-color: white;
+            width: 33.3%;
+            height: 100%;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+        }
+
+        #hero-after>div:first-child>div>div:first-child {
+            width: 50px;
+            height: 70px;
+            background-color: white;
+
+
+        }
+
+        #hero-after>div:first-child>div>div:first-child img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        #hero-after>div:first-child>div>div:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        #hero-after>div:first-child>div>div:nth-child(2) a:nth-of-type(1) {
+            font-size: 12px;
+            font-family: iranyekan;
+        }
+
+        #hero-after>div:first-child>div>div:nth-child(2) a:nth-of-type(2) {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        #hero-after>div:first-child>div>div:nth-child(2) a:nth-of-type(3) {
+            font-size: 12px;
+            font-family: iranyekan;
+
+        }
+
+        #hero-after>div:last-child {
+            width: 23%;
+            background-color: white;
+            height: 200px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+        }
+
+        #hero-after>div:last-child>div:first-child {
+            width: 50px;
+            height: 70px;
+            background-color: white;
+        }
+
+        #hero-after>div:last-child>div:first-child img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        #hero-after>div:last-child>div:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #hero-after>div:last-child>div:nth-child(2) a:nth-of-type(1) {
+            font-size: 12px;
+            font-family: iranyekan;
+        }
+
+        #hero-after>div:last-child>div:nth-child(2) a:nth-of-type(2) {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        #hero-after>div:last-child>div:nth-child(2) a:nth-of-type(3) {
+            font-size: 12px;
+            font-family: iranyekan;
+        }
+
+
+
+
+
+
+
+
+
+
+
+        main {
+            width: calc(100% - 80px);
+            /* max-width: 1500px; */
+            background-color: #e6e6e6;
+            display: flex;
+            flex-direction: column;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        main .accesory {
+            /* max-width: 1500px; */
+            display: flex;
+            flex-direction: column;
+            padding-top: 24px;
+            background-color: white;
+            flex-wrap: wrap;
+            margin-top: 28px;
+            border-radius: 8px;
+
+
+        }
+
+        main .accesory .onvan {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 28px;
+            font-family: iranyekan;
+            font-weight: 800;
+            padding-right: 18px;
+            padding-left: 18px;
+            padding-bottom: 12px;
+            background-color: white;
+            /* margin-top: 24px; */
+
+        }
+
+        main .accesory .onvan1 {
+            width: 97%;
+            margin: 0 auto;
+            background-color: gray;
+            height: 1px;
+        }
+
+        main .accesory .mohtava {
+            max-width: 100%;
+            display: flex;
+            /* flex-wrap: wrap; */
+            flex-direction: row;
+            background-color: white;
+            gap: 12px;
+
+
+
+
+
+        }
+
+        main .accesory .mohtava .imge {
+            width: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            height: 220px;
+
+        }
+
+
+        main .accesory .mohtava .imge .imag {
+            /* display: flex; */
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            margin-top: 48px;
+            border-radius: 8%;
+
+        }
+
+        main .accesory .mohtava .imge .imag img {
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+        }
+
+        main .accesory .mohtava .imge .matn {
+            width: 100px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-top: 36px;
+            margin-bottom: 36px;
+            font-size: 18px;
+            font-weight: 600;
+            font-family: iranyekan;
+
+        }
+
+        main .accesory .mohtava .imge .matn span.matn1 {
+            font-size: 12px;
+        }
+
+        main .accesory .onvan .onvan-right {
+            display: flex;
+            /* padding-top: 16px; */
+            /* padding-bottom: 16px; */
+            font-size: 28px;
+            font-family: iranyekan;
+            font-weight: 800;
+        }
+
+        main .accesory .onvan .onvan-left ul {
+            display: flex;
+            flex-direction: row;
+            list-style-type: none;
+            justify-content: space-between;
+            font-size: 16px;
+            padding: 0;
+            margin: 0;
+            gap: 24px;
+            /* font-size: 16px; */
+            /* padding-top: 16px; */
+            /* padding-bottom: 16px; */
+            stroke: gray;
+            font-family: iranyekan;
+            font-weight: 500;
+            padding-left: 18px;
+            color: gray;
+        }
+
+        main .accesory .mohtava-1 {
+            display: flex;
+            flex-direction: row;
+            background-color: white;
+            gap: 12px;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 24px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+
+        }
+
+        main .accesory .mohtava-1 .imge {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            height: 320px;
+
+        }
+
+        main .accesory .mohtava-1 .imge .imag {
+            width: 90%;
+            height: 220px;
+            background-color: white;
+            margin-top: 48px;
+            border-radius: 8px;
+        }
+
+        main .accesory .mohtava-1 .imge .imag img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        main .accesory .mohtava-1 .imge .matn {
+            width: 90%;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-top: 36px;
+            margin-bottom: 36px;
+            font-size: 18px;
+            font-weight: 600;
+            font-family: iranyekan;
+
+        }
+
+        main .accesory .mohtava-1 .imge .matn span.matn1 {
+            font-size: 12px;
+        }
+
+        #digital {
+            display: flex;
+            flex-direction: column;
+            /* padding-top: 24px; */
+            background-color: #e6e6e6;
+        }
+
+        #digital>div:first-child {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 22px;
+            font-family: iranyekan;
+            font-weight: 500;
+            padding-right: 18px;
+            padding-left: 18px;
+            padding-bottom: 12px;
+            background-color: white;
+            margin-top: 24px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+
+        }
+
+        #digital>div:first-child>div:first-child {
+            display: flex;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            font-size: 28px;
+            font-weight: 800;
+            font-family: iranyekan;
+            justify-content: right;
+
+
+
+        }
+
+        #digital>div:first-child>div:nth-child(2) ul {
+            display: flex;
+            flex-direction: row;
+            list-style-type: none;
+            justify-content: left;
+            align-items: center;
+            font-size: 16px;
+            padding: 0;
+            margin: 0;
+            gap: 24px;
+            font-size: 16px;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            stroke: gray;
+            font-family: iranyekan;
+            font-weight: 500;
+            padding-left: 24px;
+            color: gray;
+        }
+
+        #digital>div:nth-child(2) {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            padding-top: 8px;
+            width: 100%;
+            padding-bottom: 46px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+
+        }
+
+        #digital>div:nth-child(2)>div:first-child {
+            display: flex;
+            flex-direction: column;
+            width: 220px;
+            height: 270px;
+            background-color: lightgray;
+            border-radius: 10px;
+        }
+
+        #digital>div:nth-child(2)>div:first-child img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #digital>div:nth-child(2)>div:nth-child(2) div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 200px;
+            height: 300px;
+            background-color: white;
+            border-radius: 8px;
+            gap: 8px
+        }
+
+        #digital>div:nth-child(2)>div:nth-child(2) div img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #digital>div:nth-child(2)>div:nth-child(2) div>div:first-child {
+            display: flex;
+
+            width: 150px;
+            height: 150px;
+            background-color: lightgray;
+        }
+
+        #digital>div:nth-child(2)>div:nth-child(2) div>div:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: self-start;
+            background-color: white;
+            width: 150px;
+            height: 100px;
+            text-decoration: none;
+            background-color: white;
+        }
+
+        #digital>div:nth-child(2)>div:nth-child(2) div>div:nth-child(2)>a:nth-of-type(1) {
+            font-size: 16px;
+            color: black;
+            text-decoration: none;
+
+        }
+
+        #digital>div:nth-child(2)>div:nth-child(2) div>div:nth-child(2)>a:nth-of-type(2) {
+            color: black;
+            font-family: iranyekan;
+            font-size: 16px;
+            font-weight: 800;
+            text-decoration: none;
+
+        }
+
+        #digital>div:nth-child(2)>div:nth-child(2) div>div:nth-child(2)>a:nth-of-type(3) {
+            color: black;
+            font-family: iranyekan;
+            font-size: 16px;
+            font-weight: 800;
+            text-decoration: none;
+        }
+
+
+        #digital>div:nth-child(2)>div:nth-child(3) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 220px;
+            height: 300px;
+            background-color: white;
+            border-radius: 8px;
+            gap: 8px
+        }
+
+        #digital>div:nth-child(2)>div:nth-child(3) div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 220px;
+            height: 300px;
+            background-color: white;
+            border-radius: 8px;
+            gap: 8px
+        }
+
+        #digital>div:nth-child(2)>div:nth-child(3) div img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        #digital>div:nth-child(2)>div:nth-child(3) div>div:first-child {
+            display: flex;
+
+            width: 150px;
+            height: 150px;
+            background-color: white;
+        }
+
+        #digital>div:nth-child(2)>div:nth-child(3) div>div:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: self-start;
+            background-color: white;
+            width: 150px;
+            height: 100px;
+        }
+
+        #digital>div:nth-child(2)>div:nth-child(3) div>div:nth-child(2) a:nth-of-type(1) {
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+        }
+
+        #digital>div:nth-child(2)>div:nth-child(3) div>div:nth-child(2) a:nth-of-type(2) {
+            color: black;
+            font-family: iranyekan;
+            font-size: 16px;
+            font-weight: 800;
+            text-decoration: none;
+        }
+
+        #digital>div:nth-child(2)>div:nth-child(3) div>div:nth-child(2) a:nth-of-type(3) {
+            color: black;
+            font-family: iranyekan;
+            font-size: 16px;
+            font-weight: 800;
+            text-decoration: none;
+        }
+
+
+        #digital>div:nth-child(2)>div:nth-child(4) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 220px;
+            height: 300px;
+            background-color: white;
+            border-radius: 8px;
+            gap: 8px
+        }
+
+        #digital>div:nth-child(2)>div:nth-child(4) div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 220px;
+            height: 300px;
+            background-color: white;
+            border-radius: 8px;
+            gap: 8px
+        }
+
+        #digital>div:nth-child(2)>div:nth-child(4) div img {
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+        }
+
+        #digital>div:nth-child(2)>div:nth-child(4) div>div:first-child {
+            display: flex;
+
+            width: 150px;
+            height: 150px;
+            background-color: white;
+        }
+
+        #digital>div:nth-child(2)>div:nth-child(4) div>div:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: self-start;
+            background-color: white;
+            width: 150px;
+            height: 100px;
+        }
+
+        #digital>div:nth-child(2)>div:nth-child(4) div>div:nth-child(2) a:nth-of-type(1) {
+            color: black;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        #digital>div:nth-child(2)>div:nth-child(4) div>div:nth-child(2) a:nth-of-type(2) {
+            color: black;
+            font-family: iranyekan;
+            font-size: 16px;
+            font-weight: 800;
+            text-decoration: none;
+        }
+
+        #digital>div:nth-child(2)>div:nth-child(4) div>div:nth-child(2) a:nth-of-type(3) {
+            color: black;
+            font-family: iranyekan;
+            font-size: 16px;
+            font-weight: 800;
+            text-decoration: none;
+        }
+
+
+
+        #digital>div:nth-child(2)>div:nth-child(5) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 220px;
+            height: 300px;
+            background-color: white;
+            border-radius: 8px;
+            gap: 8px
+        }
+
+        #digital>div:nth-child(2)>div:nth-child(5) div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 220px;
+            height: 300px;
+            background-color: white;
+            border-radius: 8px;
+            gap: 8px
+        }
+
+        #digital>div:nth-child(2)>div:nth-child(5) div img {
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+        }
+
+        #digital>div:nth-child(2)>div:nth-child(5) div>div:first-child {
+            display: flex;
+
+            width: 150px;
+            height: 150px;
+            background-color: white;
+        }
+
+        #digital>div:nth-child(2)>div:nth-child(5) div>div:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: self-start;
+            background-color: white;
+            width: 150px;
+            height: 100px;
+        }
+
+        #digital>div:nth-child(2)>div:nth-child(5) div>div:nth-child(2) a:nth-of-type(1) {
+            font-size: 16px;
+            color: black;
+            text-decoration: none;
+        }
+
+        #digital>div:nth-child(2)>div:nth-child(5) div>div:nth-child(2) a:nth-of-type(2) {
+            color: black;
+            font-family: iranyekan;
+            font-size: 16px;
+            font-weight: 800;
+            text-decoration: none;
+        }
+
+        #digital>div:nth-child(2)>div:nth-child(5) div>div:nth-child(2) a:nth-of-type(3) {
+            color: black;
+            font-family: iranyekan;
+            font-size: 16px;
+            font-weight: 800;
+            text-decoration: none;
+        }
+
+        #digital>div:nth-child(2)>div:nth-child(6) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 220px;
+            height: 300px;
+            background-color: white;
+            border-radius: 8px;
+            gap: 8px
+        }
+
+        #digital>div:nth-child(2)>div:nth-child(6) div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 220px;
+            height: 300px;
+            background-color: white;
+            border-radius: 8px;
+            gap: 8px
+        }
+
+        #digital>div:nth-child(2)>div:nth-child(6) div img {
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+
+        }
+
+        #digital>div:nth-child(2)>div:nth-child(6) div>div:first-child {
+            display: flex;
+
+            width: 150px;
+            height: 150px;
+            background-color: white;
+        }
+
+        #digital>div:nth-child(2)>div:nth-child(6) div>div:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: self-start;
+            background-color: white;
+            width: 150px;
+            height: 100px;
+        }
+
+        #digital>div:nth-child(2)>div:nth-child(6) div>div:nth-child(2) a:nth-of-type(1) {
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+        }
+
+        #digital>div:nth-child(2)>div:nth-child(6) div>div:nth-child(2) a:nth-of-type(2) {
+            color: black;
+            font-family: iranyekan;
+            font-size: 16px;
+            font-weight: 800;
+            text-decoration: none;
+
+        }
+
+        #digital>div:nth-child(2)>div:nth-child(6) div>div:nth-child(2) a:nth-of-type(3) {
+            color: black;
+            font-family: iranyekan;
+            font-size: 16px;
+            font-weight: 800;
+            text-decoration: none;
+
+        }
+
+        #furniture {
+            display: flex;
+            flex-direction: column;
+            /* padding-top: 24px; */
+            background-color: #e6e6e6;
+            margin-top: 24px;
+            border-radius: 10px;
+        }
+
+        #furniture>div:first-child {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 28px;
+            font-family: iranyekan;
+            font-weight: 800;
+            padding-right: 18px;
+            padding-left: 18px;
+            padding-bottom: 12px;
+            background-color: white;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+
+        }
+
+        #furniture>div:first-child>div:first-child {
+            display: flex;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            font-size: 28px;
+            font-family: iranyekan;
+            justify-content: right;
+
+
+        }
+
+        #furniture>div:first-child>div:nth-child(2) ul {
+            display: flex;
+            flex-direction: row;
+            list-style-type: none;
+            justify-content: left;
+            align-items: center;
+            font-size: 16px;
+            padding: 0;
+            margin: 0;
+            gap: 24px;
+            font-size: 16px;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            font-weight: 500;
+            stroke: gray;
+            font-family: iranyekan;
+            padding-left: 24px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            color: gray;
+
+
+        }
+
+        #furniture>div:nth-child(2) {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            padding-top: 8px;
+            padding-bottom: 48px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+
+        }
+
+        #furniture>div:nth-child(2)>div:first-child {
+            display: flex;
+            flex-direction: column;
+            width: 220px;
+            height: 270px;
+            background-color: white;
+            border-radius: 8px;
+        }
+
+        #furniture>div:nth-child(2)>div:first-child img {
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+        }
+
+        #furniture>div:nth-child(2)>div:nth-child(2) div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 200px;
+            height: 300px;
+            background-color: white;
+            border-radius: 8px;
+            gap: 8px
+        }
+
+        #furniture>div:nth-child(2)>div:nth-child(2) div>div:first-child {
+            display: flex;
+
+            width: 150px;
+            height: 150px;
+            background-color: white;
+        }
+
+        #furniture>div:nth-child(2)>div:nth-child(2) div>div:first-child img {
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+        }
+
+        #furniture>div:nth-child(2)>div:nth-child(2) div>div:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: self-start;
+            background-color: white;
+            width: 150px;
+            height: 100px;
+        }
+
+        #furniture>div:nth-child(2)>div:nth-child(2) div>div:nth-child(2) a:nth-of-type(1) {
+            color: black;
+            font-size: 16px;
+            text-decoration: none;
+
+
+        }
+
+        #furniture>div:nth-child(2)>div:nth-child(2) div>div:nth-child(2) a:nth-of-type(2) {
+            color: black;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: 600;
+
+        }
+
+        #furniture>div:nth-child(2)>div:nth-child(2) div>div:nth-child(2) a:nth-of-type(3) {
+            color: black;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: 600;
+
+        }
+
+
+        #furniture>div:nth-child(2)>div:nth-child(3) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 220px;
+            height: 300px;
+            background-color: white;
+            border-radius: 8px;
+            gap: 8px
+        }
+
+        #furniture>div:nth-child(2)>div:nth-child(3) div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 220px;
+            height: 300px;
+            background-color: white;
+            border-radius: 8px;
+            gap: 8px
+        }
+
+        #furniture>div:nth-child(2)>div:nth-child(3) div>div:first-child {
+            display: flex;
+
+            width: 150px;
+            height: 150px;
+            background-color: white;
+        }
+
+        #furniture>div:nth-child(2)>div:nth-child(3) div>div:first-child img {
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+        }
+
+        #furniture>div:nth-child(2)>div:nth-child(3) div>div:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: self-start;
+            background-color: white;
+            width: 150px;
+            height: 100px;
+        }
+
+        #furniture>div:nth-child(2)>div:nth-child(3) div>div:nth-child(2) a:nth-of-type(1) {
+            color: black;
+            font-size: 16px;
+            text-decoration: none;
+
+        }
+
+        #furniture>div:nth-child(2)>div:nth-child(3) div>div:nth-child(2) a:nth-of-type(2) {
+            color: black;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: 600;
+
+        }
+
+        #furniture>div:nth-child(2)>div:nth-child(3) div>div:nth-child(2) a:nth-of-type(3) {
+            color: black;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: 600;
+
+        }
+
+
+        #furniture>div:nth-child(2)>div:nth-child(4) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 220px;
+            height: 300px;
+            background-color: white;
+            border-radius: 8px;
+            gap: 8px
+        }
+
+        #furniture>div:nth-child(2)>div:nth-child(4) div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 220px;
+            height: 300px;
+            background-color: white;
+            border-radius: 8px;
+            gap: 8px
+        }
+
+        #furniture>div:nth-child(2)>div:nth-child(4) div>div:first-child {
+            display: flex;
+
+            width: 150px;
+            height: 150px;
+            background-color: white;
+        }
+
+        #furniture>div:nth-child(2)>div:nth-child(4) div>div:first-child img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        #furniture>div:nth-child(2)>div:nth-child(4) div>div:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: self-start;
+            background-color: white;
+            width: 150px;
+            height: 100px;
+        }
+
+        #furniture>div:nth-child(2)>div:nth-child(4) div>div:nth-child(2) a:nth-of-type(1) {
+            color: black;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        #furniture>div:nth-child(2)>div:nth-child(4) div>div:nth-child(2) a:nth-of-type(2) {
+            color: black;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        #furniture>div:nth-child(2)>div:nth-child(4) div>div:nth-child(2) a:nth-of-type(3) {
+            color: black;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+
+
+        #furniture>div:nth-child(2)>div:nth-child(5) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 220px;
+            height: 300px;
+            background-color: white;
+            border-radius: 8px;
+            gap: 8px
+        }
+
+        #furniture>div:nth-child(2)>div:nth-child(5) div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 220px;
+            height: 300px;
+            background-color: white;
+            border-radius: 8px;
+            gap: 8px
+        }
+
+        #furniture>div:nth-child(2)>div:nth-child(5) div>div:first-child {
+            display: flex;
+
+            width: 150px;
+            height: 150px;
+            background-color: white;
+        }
+
+        #furniture>div:nth-child(2)>div:nth-child(5) div>div:first-child img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        #furniture>div:nth-child(2)>div:nth-child(5) div>div:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: self-start;
+            background-color: white;
+            width: 150px;
+            height: 100px;
+        }
+
+        #furniture>div:nth-child(2)>div:nth-child(5) div>div:nth-child(2) a:nth-of-type(1) {
+            color: black;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        #furniture>div:nth-child(2)>div:nth-child(5) div>div:nth-child(2) a:nth-of-type(2) {
+            color: black;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        #furniture>div:nth-child(2)>div:nth-child(5) div>div:nth-child(2) a:nth-of-type(3) {
+            color: black;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        #furniture>div:nth-child(2)>div:nth-child(6) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 220px;
+            height: 300px;
+            background-color: white;
+            border-radius: 8px;
+            gap: 8px
+        }
+
+        #furniture>div:nth-child(2)>div:nth-child(6) div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 220px;
+            height: 300px;
+            background-color: white;
+            border-radius: 8px;
+            gap: 8px
+        }
+
+        #furniture>div:nth-child(2)>div:nth-child(6) div>div:first-child {
+            display: flex;
+
+            width: 150px;
+            height: 150px;
+            background-color: white;
+        }
+
+        #furniture>div:nth-child(2)>div:nth-child(6) div>div:first-child img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        #furniture>div:nth-child(2)>div:nth-child(6) div>div:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: self-start;
+            background-color: white;
+            width: 150px;
+            height: 100px;
+        }
+
+        #furniture>div:nth-child(2)>div:nth-child(6) div>div:nth-child(2) a:nth-of-type(1) {
+            color: black;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        #furniture>div:nth-child(2)>div:nth-child(6) div>div:nth-child(2) a:nth-of-type(2) {
+            color: black;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        #furniture>div:nth-child(2)>div:nth-child(6) div>div:nth-child(2) a:nth-of-type(3) {
+            color: black;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        #beauty {
+            display: flex;
+            flex-direction: column;
+            /* padding-top: 24px; */
+            background-color: #e6e6e6;
+            margin-top: 24px;
+            border-radius: 8px;
+        }
+
+        #beauty>div:first-child {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 28px;
+            font-family: iranyekan;
+            font-weight: 800;
+            padding-right: 18px;
+            padding-right: 18px;
+            padding-left: 18px;
+            padding-bottom: 12px;
+            background-color: white;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+
+
+        }
+
+        #beauty>div:first-child>div:first-child {
+            display: flex;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            font-size: 28px;
+            font-family: iranyekan;
+            justify-content: right;
+            font-weight: 800;
+
+
+        }
+
+        #beauty>div:first-child>div:nth-child(2) ul {
+            display: flex;
+            flex-direction: row;
+            list-style-type: none;
+            justify-content: left;
+            align-items: center;
+            font-size: 16px;
+            padding: 0;
+            margin: 0;
+            gap: 24px;
+            font-size: 16px;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            stroke: gray;
+            font-family: iranyekan;
+            padding-left: 24px;
+            font-weight: 500;
+            color: gray;
+        }
+
+
+        #beauty>div:nth-child(2) {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            padding-top: 8px;
+            padding-bottom: 46px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+
+
+        }
+
+        #beauty>div:nth-child(2)>div:first-child {
+            display: flex;
+            flex-direction: column;
+            width: 220px;
+            height: 270px;
+            background-color: white;
+            border-radius: 8px;
+
+        }
+
+        #beauty>div:nth-child(2)>div:first-child img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        #beauty>div:nth-child(2)>div:nth-child(2) div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 220px;
+            height: 300px;
+            background-color: white;
+            border-radius: 8px;
+            gap: 8px
+        }
+
+        #beauty>div:nth-child(2)>div:nth-child(2) div img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        #beauty>div:nth-child(2)>div:nth-child(2) div>div:first-child {
+            display: flex;
+
+            width: 150px;
+            height: 150px;
+            background-color: white;
+        }
+
+        #beauty>div:nth-child(2)>div:nth-child(2) div>div:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: self-start;
+            background-color: white;
+            width: 150px;
+            height: 100px;
+        }
+
+        #beauty>div:nth-child(2)>div:nth-child(2) div>div:nth-child(2) a:nth-of-type(1) {
+            color: black;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        #beauty>div:nth-child(2)>div:nth-child(2) div>div:nth-child(2) a:nth-of-type(2) {
+            color: black;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        #beauty>div:nth-child(2)>div:nth-child(2) div>div:nth-child(2) a:nth-of-type(3) {
+            color: black;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+
+        #beauty>div:nth-child(2)>div:nth-child(3) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 220px;
+            height: 300px;
+            background-color: white;
+            border-radius: 8px;
+            gap: 8px
+        }
+
+        #beauty>div:nth-child(2)>div:nth-child(3) div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 220px;
+            height: 300px;
+            background-color: white;
+            border-radius: 8px;
+            gap: 8px
+        }
+
+        #beauty>div:nth-child(2)>div:nth-child(3) div img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        #beauty>div:nth-child(2)>div:nth-child(3) div>div:first-child {
+            display: flex;
+
+            width: 150px;
+            height: 150px;
+            background-color: white;
+        }
+
+        #beauty>div:nth-child(2)>div:nth-child(3) div>div:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: self-start;
+            background-color: white;
+            width: 150px;
+            height: 100px;
+        }
+
+        #beauty>div:nth-child(2)>div:nth-child(3) div>div:nth-child(2) a:nth-of-type(1) {
+            color: black;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        #beauty>div:nth-child(2)>div:nth-child(3) div>div:nth-child(2) a:nth-of-type(2) {
+            color: black;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        #beauty>div:nth-child(2)>div:nth-child(3) div>div:nth-child(2) a:nth-of-type(3) {
+            color: black;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+
+        #beauty>div:nth-child(2)>div:nth-child(4) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 220px;
+            height: 300px;
+            background-color: white;
+            border-radius: 8px;
+            gap: 8px
+        }
+
+        #beauty>div:nth-child(2)>div:nth-child(4) div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 220px;
+            height: 300px;
+            background-color: white;
+            border-radius: 8px;
+            gap: 8px
+        }
+
+        #beauty>div:nth-child(2)>div:nth-child(4) div img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        #beauty>div:nth-child(2)>div:nth-child(4) div>div:first-child {
+            display: flex;
+
+            width: 150px;
+            height: 150px;
+            background-color: white;
+        }
+
+        #beauty>div:nth-child(2)>div:nth-child(4) div>div:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: self-start;
+            background-color: white;
+            width: 150px;
+            height: 100px;
+        }
+
+        #beauty>div:nth-child(2)>div:nth-child(4) div>div:nth-child(2) a:nth-of-type(1) {
+            color: black;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        #beauty>div:nth-child(2)>div:nth-child(4) div>div:nth-child(2) a:nth-of-type(2) {
+            color: black;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        #beauty>div:nth-child(2)>div:nth-child(4) div>div:nth-child(2) a:nth-of-type(3) {
+            color: black;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+
+
+        #beauty>div:nth-child(2)>div:nth-child(5) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 220px;
+            height: 300px;
+            background-color: white;
+            border-radius: 8px;
+            gap: 8px
+        }
+
+        #beauty>div:nth-child(2)>div:nth-child(5) div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 220px;
+            height: 300px;
+            background-color: white;
+            border-radius: 8px;
+            gap: 8px
+        }
+
+        #beauty>div:nth-child(2)>div:nth-child(5) div img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        #beauty>div:nth-child(2)>div:nth-child(5) div>div:first-child {
+            display: flex;
+
+            width: 150px;
+            height: 150px;
+            background-color: lightgray;
+        }
+
+        #beauty>div:nth-child(2)>div:nth-child(5) div>div:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: self-start;
+            background-color: white;
+            width: 150px;
+            height: 100px;
+        }
+
+        #beauty>div:nth-child(2)>div:nth-child(5) div>div:nth-child(2) a:nth-of-type(1) {
+            color: black;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        #beauty>div:nth-child(2)>div:nth-child(5) div>div:nth-child(2) a:nth-of-type(2) {
+            color: black;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        #beauty>div:nth-child(2)>div:nth-child(5) div>div:nth-child(2) a:nth-of-type(3) {
+            color: black;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        #beauty>div:nth-child(2)>div:nth-child(6) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 220px;
+            height: 300px;
+            background-color: white;
+            border-radius: 8px;
+            gap: 8px
+        }
+
+        #beauty>div:nth-child(2)>div:nth-child(6) div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 220px;
+            height: 300px;
+            background-color: white;
+            border-radius: 8px;
+            gap: 8px
+        }
+
+        #beauty>div:nth-child(2)>div:nth-child(6) div img {
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+        }
+
+        #beauty>div:nth-child(2)>div:nth-child(6) div>div:first-child {
+            display: flex;
+
+            width: 150px;
+            height: 150px;
+            background-color: lightgray;
+        }
+
+        #beauty>div:nth-child(2)>div:nth-child(6) div>div:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: self-start;
+            background-color: white;
+            width: 150px;
+            height: 100px;
+        }
+
+        #beauty>div:nth-child(2)>div:nth-child(6) div>div:nth-child(2) a:nth-of-type(1) {
+            color: black;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        #beauty>div:nth-child(2)>div:nth-child(6) div>div:nth-child(2) a:nth-of-type(2) {
+            color: black;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        #beauty>div:nth-child(2)>div:nth-child(6) div>div:nth-child(2) a:nth-of-type(3) {
+            color: black;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        #clothing {
+            display: flex;
+            flex-direction: column;
+            /* padding-top: 24px; */
+            background-color: #e6e6e6;
+            margin-top: 24px;
+        }
+
+        #clothing>div:first-child {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 22px;
+            font-family: iranyekan;
+            font-weight: 800;
+            padding-right: 24px;
+            padding-bottom: 12px;
+            padding-left: 18px;
+            background-color: white;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+
+
+        }
+
+        #clothing>div:first-child>div:first-child {
+            display: flex;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            font-size: 28px;
+            font-family: iranyekan;
+            justify-content: right;
+
+
+
+        }
+
+        #clothing>div:first-child>div:nth-child(2) ul {
+            display: flex;
+            flex-direction: row;
+            list-style-type: none;
+            justify-content: left;
+            align-items: center;
+            font-size: 16px;
+            padding: 0;
+            margin: 0;
+            gap: 24px;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            stroke: gray;
+            font-family: iranyekan;
+            font-weight: 500;
+            padding-left: 24px;
+            color: gray;
+        }
+
+        #clothing>div:nth-child(2) {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            padding-top: 8px;
+            padding-bottom: 46px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        #clothing>div:nth-child(2)>div:first-child {
+            display: flex;
+            flex-direction: column;
+            width: 220px;
+            height: 270px;
+            background-color: white;
+            border-radius: 8px;
+        }
+
+        #clothing>div:nth-child(2)>div:first-child img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        #clothing>div:nth-child(2)>div:nth-child(2) div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 200px;
+            height: 300px;
+            background-color: white;
+            border-radius: 8px;
+            gap: 8px
+        }
+
+        #clothing>div:nth-child(2)>div:nth-child(2) div img {
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+        }
+
+        #clothing>div:nth-child(2)>div:nth-child(2) div>div:first-child {
+            display: flex;
+
+            width: 150px;
+            height: 150px;
+            background-color: white;
+        }
+
+        #clothing>div:nth-child(2)>div:nth-child(2) div>div:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: self-start;
+            background-color: white;
+            width: 150px;
+            height: 100px;
+        }
+
+        #clothing>div:nth-child(2)>div:nth-child(2) div>div:nth-child(2) a:nth-of-type(1) {
+            color: black;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        #clothing>div:nth-child(2)>div:nth-child(2) div>div:nth-child(2) a:nth-of-type(2) {
+            color: black;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        #clothing>div:nth-child(2)>div:nth-child(2) div>div:nth-child(2) a:nth-of-type(3) {
+            color: black;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+
+        #clothing>div:nth-child(2)>div:nth-child(3) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 220px;
+            height: 300px;
+            background-color: white;
+            border-radius: 8px;
+            gap: 8px
+        }
+
+        #clothing>div:nth-child(2)>div:nth-child(3) div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 220px;
+            height: 300px;
+            background-color: white;
+            border-radius: 8px;
+            gap: 8px
+        }
+
+        #clothing>div:nth-child(2)>div:nth-child(3) div img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        #clothing>div:nth-child(2)>div:nth-child(3) div>div:first-child {
+            display: flex;
+
+            width: 150px;
+            height: 150px;
+            background-color: white;
+        }
+
+        #clothing>div:nth-child(2)>div:nth-child(3) div>div:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: self-start;
+            background-color: white;
+            width: 150px;
+            height: 100px;
+        }
+
+        #clothing>div:nth-child(2)>div:nth-child(3) div>div:nth-child(2) a:nth-of-type(1) {
+            color: black;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        #clothing>div:nth-child(2)>div:nth-child(3) div>div:nth-child(2) a:nth-of-type(2) {
+            color: black;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        #clothing>div:nth-child(2)>div:nth-child(3) div>div:nth-child(2) a:nth-of-type(3) {
+            color: black;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+
+        #clothing>div:nth-child(2)>div:nth-child(4) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 220px;
+            height: 300px;
+            background-color: white;
+            border-radius: 8px;
+            gap: 8px
+        }
+
+        #clothing>div:nth-child(2)>div:nth-child(4) div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 220px;
+            height: 300px;
+            background-color: white;
+            border-radius: 8px;
+            gap: 8px
+        }
+
+        #clothing>div:nth-child(2)>div:nth-child(4) div img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        #clothing>div:nth-child(2)>div:nth-child(4) div>div:first-child {
+            display: flex;
+
+            width: 150px;
+            height: 150px;
+            background-color: white;
+        }
+
+        #clothing>div:nth-child(2)>div:nth-child(4) div>div:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: self-start;
+            background-color: white;
+            width: 150px;
+            height: 100px;
+        }
+
+        #clothing>div:nth-child(2)>div:nth-child(4) div>div:nth-child(2) a:nth-of-type(1) {
+            color: black;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        #clothing>div:nth-child(2)>div:nth-child(4) div>div:nth-child(2) a:nth-of-type(2) {
+            color: black;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        #clothing>div:nth-child(2)>div:nth-child(4) div>div:nth-child(2) a:nth-of-type(3) {
+            color: black;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+
+
+        #clothing>div:nth-child(2)>div:nth-child(5) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 220px;
+            height: 300px;
+            background-color: white;
+            border-radius: 8px;
+            gap: 8px
+        }
+
+        #clothing>div:nth-child(2)>div:nth-child(5) div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 220px;
+            height: 300px;
+            background-color: white;
+            border-radius: 8px;
+            gap: 8px
+        }
+
+        #clothing>div:nth-child(2)>div:nth-child(5) div img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        #clothing>div:nth-child(2)>div:nth-child(5) div>div:first-child {
+            display: flex;
+
+            width: 150px;
+            height: 150px;
+            background-color: white;
+        }
+
+        #clothing>div:nth-child(2)>div:nth-child(5) div>div:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: self-start;
+            background-color: white;
+            width: 150px;
+            height: 100px;
+        }
+
+        #clothing>div:nth-child(2)>div:nth-child(5) div>div:nth-child(2) a:nth-of-type(1) {
+            color: black;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        #clothing>div:nth-child(2)>div:nth-child(5) div>div:nth-child(2) a:nth-of-type(2) {
+            color: black;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        #clothing>div:nth-child(2)>div:nth-child(5) div>div:nth-child(2) a:nth-of-type(3) {
+            color: black;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        #clothing>div:nth-child(2)>div:nth-child(6) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 220px;
+            height: 300px;
+            background-color: white;
+            border-radius: 8px;
+            gap: 8px
+        }
+
+        #clothing>div:nth-child(2)>div:nth-child(6) div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 220px;
+            height: 300px;
+            background-color: white;
+            border-radius: 8px;
+            gap: 8px
+        }
+
+        #clothing>div:nth-child(2)>div:nth-child(6) div img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        #clothing>div:nth-child(2)>div:nth-child(6) div>div:first-child {
+            display: flex;
+
+            width: 150px;
+            height: 150px;
+            background-color: lightgray;
+        }
+
+        #clothing>div:nth-child(2)>div:nth-child(6) div>div:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: self-start;
+            background-color: white;
+            width: 150px;
+            height: 100px;
+        }
+
+        #clothing>div:nth-child(2)>div:nth-child(6) div>div:nth-child(2) a:nth-of-type(1) {
+            color: black;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        #clothing>div:nth-child(2)>div:nth-child(6) div>div:nth-child(2) a:nth-of-type(2) {
+            color: black;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        #clothing>div:nth-child(2)>div:nth-child(6) div>div:nth-child(2) a:nth-of-type(3) {
+            color: black;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        #send {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            padding-top: 49px;
+            padding-bottom: 94px;
+            background-color: #e6e6e6;
+        }
+
+        #send div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #e6e6e6;
+            height: 100px;
+        }
+
+        #send div>span:nth-of-type(1) {
+            font-size: 13px;
+            font-family: iranyekan;
+            background-color: #e6e6e6;
+            font-weight: 500;
+        }
+
+        #send div>span:nth-of-type(2) {
+            color: gray;
+            font-size: 13px;
+            background-color: #e6e6e6;
+            font-family: iranyekan;
+            font-weight: 500;
+        }
+
+        #befor-footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+
+        }
+
+        #befor-footer>div:first-child {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            height: 80px;
+            padding-top: 30px;
+            font-size: 28px;
+            /* font-family: iranyekan; */
+            font-weight: 500;
+        }
+
+        #befor-footer>div:nth-child(2) {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            gap: 8px;
+            padding: 0;
+            margin: 0;
+            background-color: white;
+            padding-top: 10px;
+            padding-bottom: 12px;
+
+        }
+
+        #befor-footer>div:nth-child(2)>div:first-child {
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            /* border-style: solid; */
+            width: 380px;
+            background-color: white;
+            height: 50px;
+            border-radius: 6px;
+            padding-right: 20px;
+        }
+
+        #befor-footer>div:nth-child(2)>div:first-child input {
+            width: 380px;
+            height: 50px;
+            border-radius: 8px;
+            padding-right: 12px;
+            border: 1px solid gray;
+            outline: none;
+        }
+
+        #befor-footer>div:nth-child(2)>div:nth-child(2) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: khaki;
+            height: 50px;
+            width: 100px;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        #footer {
+            display: flex;
+            width: calc(100% 40px);
+            flex-direction: row;
+            max-width: 1496px;
+            background-color: white;
+            justify-content: space-between;
+            align-items: center;
+            padding-right: 20px;
+            padding-left: 20px;
+            padding-top: 46px;
+            /* width: 100%; */
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            gap: 24px;
+
+
+        }
+
+        #footer>div:first-child {
+            display: flex;
+            flex-direction: column;
+            width: 20%;
+            background-color: white;
+
+        }
+
+        #footer>div:first-child a {
+            width: 100%;
+            background-color: white;
+            font-size: 18px;
+            font-family: iranyekan;
+            padding-bottom: 24px;
+            padding-right: 12px;
+            font-weight: 600;
+            height: 30px;
+        }
+
+        #footer>div:first-child>div:nth-child(2) {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            background-color: white;
+            gap: 16px;
+            height: 80px;
+            padding-right: 24px;
+        }
+
+        #footer>div:first-child>div:nth-child(2)>div:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #footer>div:first-child>div:nth-child(3) {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            background-color: white;
+            gap: 20px;
+            height: 80px;
+            padding-right: 12px;
+        }
+
+        #footer>div:first-child>div:nth-child(3)>div:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #footer>div:nth-child(2) {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            width: 43%;
+            /* gap: 32px; */
+        }
+
+        #footer>div:nth-child(2)>div:first-child {
+            display: flex;
+            flex-direction: column;
+            height: 180px;
+            background-color: white;
+            /* padding-right: 16px; */
+            justify-content: space-between;
+            align-items: flex-start;
+            font-size: 16px;
+            font-family: iranyekan;
+            /* width: 35%; */
+
+        }
+
+        #footer>div:nth-child(2)>div:first-child a:nth-of-type(1) {
+            font-weight: 800;
+            font-size: 16px;
+            padding-bottom: 16px;
+        }
+
+        #footer>div:nth-child(2)>div:first-child a {
+            /* padding-top: 18px; */
+            padding-bottom: 18px;
+
+
+        }
+
+        /* #footer>div:nth-child(2)>div:first-child span {} */
+
+        #footer>div:nth-child(2)>div:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            height: 180px;
+            background-color: white;
+            padding-right: 16px;
+            justify-content: space-between;
+            align-items: flex-start;
+            font-size: 16px;
+            font-family: iranyekan;
+            /* width: 35%; */
+
+        }
+
+        #footer>div:nth-child(2)>div:nth-child(2) a:nth-of-type(1) {
+            font-weight: 800;
+            font-size: 16px;
+        }
+
+        #footer>div:nth-child(2)>div:nth-child(2) {
+            /* padding-top: 18px; */
+            /* padding-bottom: 18px; */
+            font-size: 18px;
+
+        }
+
+        #footer>div:nth-child(2)>div:nth-child(2) span {
+            font-size: 16px;
+        }
+
+        #footer>div:nth-child(2)>div:nth-child(3) {
+            display: flex;
+            flex-direction: column;
+            height: 180px;
+            background-color: white;
+            padding-right: 16px;
+            justify-content: space-between;
+            align-items: flex-start;
+            font-size: 16px;
+            font-family: iranyekan;
+            /* width: 30%; */
+
+        }
+
+        #footer>div:nth-child(2)>div:nth-child(3) a:nth-of-type(1) {
+            font-weight: 800;
+            font-size: 16px;
+        }
+
+        #footer>div:nth-child(2)>div:nth-child(3) {
+            /* padding-top: 18px; */
+            /* padding-bottom: 18px; */
+            font-size: 16px;
+
+        }
+
+        #footer>div:nth-child(2)>div:nth-child(3) span {
+            font-size: 18px;
+        }
+
+        #footer>div:nth-child(3) {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            width: 20%;
+            background-color: white;
+            height: 170px;
+
+        }
+
+        #footer>div:nth-child(3)>div:nth-child(1) {
+            display: flex;
+            width: 100%;
+            font-weight: 800;
+            height: 50px;
+            font-size: 16px;
+            font-family: iranyekan;
+            background-color: white;
+
+        }
+
+        #footer>div:nth-child(3)>div:nth-child(2) {
+            display: flex;
+            padding-right: 16px;
+            gap: 24px;
+            width: 100%;
+
+        }
+
+        #footer>div:nth-child(3)>div:nth-child(3) {
+            display: flex;
+            font-size: 16px;
+            font-family: iranyekan;
+            width: 100%;
+            padding-top: 12px;
+        }
+
+        #footer>div:nth-child(3)>div:nth-child(4) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 70%;
+            background-color: white;
+            height: 30px;
+            padding-right: 24px;
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        @media screen and (max-width :1200px) {
+            nav>div:first-child .aykon {
+                display: none;
+            }
+
+            nav>div:first-child .searchs {
+                width: 100%;
+            }
+
+            .search {
+                width: 70%;
+            }
+
+            nav>div:first-child .searchs {
+                justify-content: space-between;
+            }
+
+            nav>div:nth-child(2)>div:nth-child(2) ul {
+                display: none;
+
+            }
+
+            nav>div:nth-child(2)>div:first-child {
+                width: 100%;
+                justify-content: space-between;
+
+            }
+
+            #hero {
+                flex-direction: column;
+                height: 600px;
+            }
+
+            #hero>div:first-child {
+                width: 100%;
+                height: 1200px;
+
+            }
+
+            #hero>div:last-child {
+                flex-direction: row;
+                width: 100%;
+
+            }
+
+            #hero>div:last-child>div {
+                width: 50%;
+                height: 200px;
+                background-color: white;
+            }
+
+            #hero-after {
+                flex-wrap: wrap;
+                flex-direction: row;
+            }
+
+            #hero-after>div:first-child {
+                width: 100%;
+                flex-wrap: wrap;
+            }
+
+            #hero-after>div:first-child>div {
+                background-color: white;
+                width: calc(50% - 8px);
+            }
+
+            #hero-after>div:last-child {
+                margin-right: auto;
+                background-color: white;
+                width: calc(50% - 8px);
+                align-self: flex-start;
+            }
+
+
+
+
+            main .accesory .mohtava {
+                flex-wrap: wrap;
+            }
+
+            #digital>div:nth-child(2) {
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+
+            #furniture>div:nth-child(2) {
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+
+            #beauty>div:nth-child(2) {
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+
+            #clothing>div:nth-child(2) {
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+
+
+
+
+
+
+        }
+
+        @media screen and (max-width :787px) {
+            nav>div:first-child .aykon {
+                display: flex;
+            }
+
+            nav>div:first-child .aykon .store {
+                padding-left: 10px;
+                /* margin-left: 10px; */
+            }
+
+            nav>div:first-child .aykon .store i {
+                border-radius: 10px;
+            }
+
+            nav>div:first-child .aykon .store:nth-child(1) {
+                display: none;
+            }
+
+            nav>div:first-child .aykon .store:nth-child(2) {
+                display: none;
+            }
+
+            nav>div:first-child .aykon .store .store1 {
+                display: none;
+            }
+
+            nav>div:nth-child(2) {
+                display: none;
+            }
+
+            nav {
+                padding-bottom: 20px;
+            }
+
+            .search {
+                display: none;
+            }
+
+            .search2 {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                text-align: center;
+                height: 50px;
+                width: 90%;
+                margin-right: 40px;
+
+
+            }
+
+            /* .search a {
+            color: white;
+            font-size: x-small;
+            margin-top: 6px;
+        } */
+
+            .search2 .magnify {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                background-color: rgba(17, 33, 55, 1);
+                width: 50px;
+                height: 50px;
+                border-radius: 10px 0 0 10px;
+
+            }
+
+            nav>div:first-child .search2 .magnify i {
+                color: white;
+            }
+
+            .search2 select {
+                font-family: iranyekan;
+                font-weight: 400;
+                font-size: 12px;
+                outline: none;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                width: 80px;
+                height: 50px;
+                margin: 0;
+                border: none;
+            }
+
+            .search2 input {
+
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                padding-right: 20px;
+                font-family: iranyekan;
+                font-weight: 400;
+                font-size: xx-small;
+                width: 100%;
+                height: 50px;
+                outline: none;
+                border: none;
+                margin: 0;
+                border-radius: 0 10px 10px 0;
+                font-size: 16px;
+
+            }
+
+            #hero {
+                /* padding-left: 50px; */
+                padding-right: 10px;
+                flex-direction: column;
+                width: calc(100% - 10px);
+
+            }
+
+            #hero>div:first-child {
+                width: calc(100% - 10px);
+            }
+
+            #hero>div:last-child {
+                flex-direction: column;
+                width: calc(100% - 22px);
+            }
+
+            #hero>div:last-child>div {
+                width: 100%;
+                padding-left: 10px;
+            }
+
+            #hero-after {
+                flex-wrap: wrap;
+                flex-direction: column;
+                padding-right: 10px;
+
+                width: calc(100% - 10px);
+                padding-top: 32px;
+
+            }
+
+            #hero-after>div:first-child>div {
+                /* width: 100% */
+                height: 200px;
+
+            }
+
+            #hero-after>div:first-child {
+                width: calc(100% - 16px);
+                flex-wrap: wrap;
+            }
+
+            #hero-after>div:first-child>div {
+                background-color: white;
+                width: 100%
+            }
+
+            #hero-after>div:last-child {
+                margin-right: auto;
+                margin-left: 36px;
+                background-color: white;
+                width: calc(100% - 10px);
+                align-self: center;
+
+                justify-content: center;
+                padding-bottom: 12px;
+
+            }
+
+
+        }
+
+        /* @media screen and (max-width :576px) {
+            nav>div:first-child .aykon {
+                display: flex;
+            }
+
+            nav>div:first-child .aykon .store i {
+                border-radius: 10px;
+            }
+
+            nav>div:first-child .aykon .store:nth-child(1) {
+                display: none;
+            }
+
+            nav>div:first-child .aykon .store:nth-child(2) {
+                display: none;
+            }
+
+            nav>div:first-child .aykon .store .store1 {
+                display: none;
+            }
+
+            nav>div:nth-child(2) {
+                display: none;
+            }
+
+            .search {
+                display: none;
+            }
+
+            #hero>div:last-child {
+                flex-direction: column;
+                width: 100%;
+
+            }
+
+            #footer {
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                background-color: aqua;
+            }
+
+            #footer>div:first-child>div:nth-child(2) {
+                padding-right: 0;
+            }
+
+            #footer>div:first-child>div:nth-child(3) {
+                padding-right: 36px;
+
+
+            }
+
+
+            #footer>div:first-child a {
+                display: flex;
+                width: 200px;
+
+                background-color: yellow;
+            }
+        } */
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div>
+            <div class="searchs">
+                <a href="#">زئومارت فارسی</a>
+                <div class="search">
+                    <input type="search" value="جستجوی محصولات...">
+
+                    <select>
+                        <optgroup>
+                            <option selected>دسته بندی</option>
+                            <option>تجهیزات خودرو</option>
+                            <option>ساعت هوشمند</option>
+                            <option>کالای دیجیتال</option>
+                            <option>موبیال</option>
+                            <option>هدفون</option>
+                            <option>کالای سوپر مارکت</option>
+                            <option>صبحانه</option>
+                            <option>میوه</option>
+                            <option>لوازم منزل</option>
+                        </optgroup>
+                    </select>
+
+
+                    <div class="magnify"><a href="#"><i class="fa-brands fa-sistrix"></i></a></div>
+                </div>
+
+            </div>
+
+
+            <div class="aykon">
+                <div class="store">
+                    <div class="store1">
+                        <div class="store1-1"> تماس</div>
+                        <div class="store1-2">09112404444</div>
+                    </div><i class="fa-solid fa-phone-volume"></i>
+                </div>
+                <div class="store">
+                    <div class="store1">
+                        <div class="store1-1">علاقه مندی </div>
+                        <div class="store1-2">آیتم های من</div>
+                    </div><i class="fa-regular fa-heart"></i>
+                </div>
+                <div class="store">
+                    <div class="store1">
+                        <div class="store1-1"> ورود</div>
+                        <div class="store1-2">اکانت</div>
+                    </div><i class="fa-solid fa-file-user"></i>
+                </div>
+                <div class="store">
+                    <div class="store1">
+                        <div class="store1-1"> 0تومان</div>
+                        <div class="store1-2">مجموع</div>
+                    </div><i class="fa-sharp fa-solid fa-basket-shopping-simple"></i>
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+
+        <div>
+            <div>
+                <a href="#"><i class="fa-solid fa-bars fa-lg">دسته بندی</i></a>
+                <ul>
+                    <li>خانه<i class="fa-solid fa-chevron-down"></i></li>
+                    <li>فروشگاه<i class="fa-solid fa-chevron-down"></i> </li>
+                    <li>صفحات<i class="fa-solid fa-chevron-down"></i> </li>
+                    <li>وبلاگ<i class="fa-solid fa-chevron-down"></i> </li>
+                </ul>
+            </div>
+
+            <div>
+                <ul class="left">
+                    <li>تخفیفات</li>
+                    <li>داغ ترین ها</li>
+                    <li>محصولات پر فروش</li>
+                    <li>جدیدترین ها</li>
+                </ul>
+            </div>
+        </div>
+       
+
+    </nav>
+    <div id="hero">
+        <div>
+            <div><img src="assets/img/image-302.jpg"></div>
+            <div>
+                <a>هدفون اونیکا مدل k910</a>
+                <a>از 50،000 تومان-600،000 تومان</a>
+                <div>انتخاب گزینه ها</div>
+            </div>
+
+        </div>
+        <div>
+            <div>
+                <div><img src="assets/img/headset-product3-600x600-1.png"></div>
+                <div>
+                    <a> شروع از 50،000 تومان </a>
+                    <a>ساعت مچی عقربه ای<br>
+                        سون فرایدی</a>
+                    <a>افزودن به سبد خرید</a>
+                </div>
+
+            </div>
+            <div>
+                <div><img src="assets/img/wach-product-600x600-1.png"></div>
+                <div>
+                    <a>از 50،000 تومان</a>
+                    <a>هدفون بی سیم سامسونگ</a>
+                    <a>افزودن به سبد خرید</a>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="hero-after">
+        <div>
+            <div>
+                <div><img src="assets/img/53b4feb9dead4898764793a7c21c71561d1775aa_1689578146.jpg"></div>
+                <div>
+                    <a>از 50،000 تومان</a>
+                    <a>هدفون بی سیم سامسونگ</a>
+                    <a>افزودن به سبد خرید</a>
+
+                </div>
+            </div>
+            <div>
+                <div><img src="assets/img/a88b419f47b74c34086751c0f44ffbb2225230f1_1690715344.jpg"></div>
+                <div>
+                    <a>از 50،000 تومان</a>
+                    <a>هدفون بی سیم سامسونگ</a>
+                    <a>افزودن به سبد خرید</a>
+
+                </div>
+            </div>
+            <div>
+                <div><img src="assets/img/45395485f1aaf96a560b273f1782dc91159e9ed9_1689579846.jpg"></div>
+                <div>
+                    <a>از 50،000 تومان</a>
+                    <a>هدفون بی سیم سامسونگ</a>
+                    <a>افزودن به سبد خرید</a>
+
+                </div>
+            </div>
+        </div>
+        <div>
+            <div><img src="assets/img/16cf3b750268b4512aa95d57e532945ab593eb4e_1673343779.jpg"></div>
+            <div>
+                <a>از 50،000 تومان</a>
+                <a>هدفون بی سیم سامسونگ</a>
+                <a>افزودن به سبد خرید</a>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <main>
+        <div class="accesory">
+            <div class="onvan">خرید براساس دسته بندی</div>
+            <div class="onvan1"></div>
+
+
+            <div class="mohtava">
+                <div class="imge">
+                    <div class="imag"><img src="assets/img/zeomart/61jLiCovxVL_1-removebg-preview.png"></div>
+                    <div class="matn">اپل
+                        <span class="matn1">محصول16</span>
+                    </div>
+                </div>
+                <div class="imge">
+                    <div class="imag"><img src="assets/img/zeomart/Samsung.png"></div>
+                    <div class="matn">سامسونگ
+                        <span class="matn1">محصول16</span>
+                    </div>
+                </div>
+                <div class="imge">
+                    <div class="imag"><img src="assets/img/zeomart/image_45-removebg-preview.png"></div>
+                    <div class="matn">سونی
+                        <span class="matn1">محصول16</span>
+                    </div>
+                </div>
+                <div class="imge">
+                    <div class="imag"><img src="assets/img/zeomart/Nike-removebg-preview.png"></div>
+                    <div class="matn">دستبند
+                        <span class="matn1">محصول16</span>
+                    </div>
+                </div>
+                <div class="imge">
+                    <div class="imag"><img src="assets/img/zeomart/Adidas-removebg-preview.png"></div>
+                    <div class="matn">عینک
+                        <span class="matn1">محصول16</span>
+                    </div>
+                </div>
+                <div class="imge">
+                    <div class="imag"><img src="assets/img/zeomart/Xiaomi-removebg-preview.png"></div>
+                    <div class="matn">تیمبرلند
+                        <span class="matn1">محصول16</span>
+                    </div>
+                </div>
+                <div class="imge">
+                    <div class="imag"><img src="assets/img/zeomart/Ray-Ban-removebg-preview.png"></div>
+                    <div class="matn">شیائومی
+                        <span class="matn1">محصول16</span>
+                    </div>
+                </div>
+                <div class="imge">
+                    <div class="imag"><img src="assets/img/zeomart/Michael_Kors-removebg-preview.png"></div>
+                    <div class="matn">ریبند
+                        <span class="matn1">محصول16</span>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="accesory">
+            <div class="onvan">
+                <div class="onvan-right">پرفروش های این ماه</div>
+                <div class="onvan-left">
+                    <ul>
+                        <li>برترین ها</li>
+                        <li>لوازم منزل</li>
+                        <li>ساعت</li>
+                        <li>موبایل</li>
+                        <li>همه</li>
+                    </ul>
+                </div>
+
+
+            </div>
+            <div class="onvan1"></div>
+            <div class="mohtava-1 owl-carousel owl-theme ">
+                <div class="imge">
+                    <div class="imag"><img src="assets/img/zeomart/ezgif-40.webp"></div>
+                    <div class="matn">اپل
+                        <span class="matn1">محصول16</span>
+                    </div>
+                </div>
+                <div class="imge">
+                    <div class="imag"><img src="assets/img/zeomart/ezgif-40.webp"></div>
+                    <div class="matn">اپل
+                        <span class="matn1">محصول16</span>
+                    </div>
+                </div>
+                <div class="imge">
+                    <div class="imag"><img src="assets/img/zeomart/ezgif-40.webp"></div>
+                    <div class="matn">اپل
+                        <span class="matn1">محصول16</span>
+                    </div>
+                </div>
+             
+           
+            
+                <div class="imge">
+                    <div class="imag"><img
+                            src="assets/img/zeomart/b4606ed1-8e7c-47fd-a028-5a4b99568233_1.9117fa6ba9b442bdc25f4225be6ac5c5.jpeg">
+                    </div>
+                    <div class="matn">سامسونگ
+                        <span class="matn1">محصول16</span>
+
+                    </div>
+                </div>
+                <div class="imge">
+                    <div class="imag"><img src="assets/img/zeomart/ezgif-39.webp"></div>
+                    <div class="matn">سونی
+                        <span class="matn1">محصول16</span>
+                    </div>
+                </div>
+                
+                <div class="imge">
+                    <div class="imag"><img
+                            src="assets/img/zeomart/351d0326-a7b2-4aa8-a5a7-8f9f1fb7df5c.ac363634d4dfc0abfdcf00ee4cff983d-scaled-2.webp">
+                    </div>
+                    <div class="matn">دستبند
+                        <span class="matn1">محصول16</span>
+                    </div>
+                </div>
+                <div class="imge">
+                    <div class="imag"><img
+                            src="assets/img/zeomart/e5fd0473-6c82-4f7d-b6cc-3e5833ec1e46_1.27ba64caed5c0a0d3669d84967d67204.jpeg">
+                    </div>
+                    <div class="matn">عینک
+                        <span class="matn1">جارو</span>
+                        <span class="matn1">6.5000</span>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+        <div id="digital">
+            <div>
+                <div>محصولات دیجتال</div>
+                <div>
+                    <ul>
+                        <li>برترین ها</li>
+                        <li>ساعت</li>
+                        <li>موبایل</li>
+                        <li>هدفون</li>
+                        <li>همه</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div>
+                <div><img
+                        src="assets/img/zeomart/pink-headphones-mint-green-background-dj-headphones-top-view-audio-music-listening-1-e1690901419949.png">
+                </div>
+                <div>
+                    <div>
+                        <div><img src="assets/img/zeomart/ezgif-93.webp"></div>
+                        <div>
+                            <a href="#">ساعت هوشمند</a>
+                            <a href="#">ساعت هوشمند z66 ultra</a>
+                            <a href="#">710000</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div><img src="assets/img/zeomart/ezgif-92.webp"></div>
+                        <div>
+                            <a href="#">ساعت هوشمند</a>
+                            <a href="#">ساعت هوشمند z66 ultra</a>
+                            <a href="#">710000</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div><img src="assets/img/zeomart/ezgif-91.webp"></div>
+                        <div>
+                            <a href="#">ساعت هوشمند</a>
+                            <a href="#">ساعت هوشمند z66 ultra</a>
+                            <a href="#">710000</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div><img src="assets/img/zeomart/ezgif-89.webp"></div>
+                        <div>
+                            <a href="#">ساعت هوشمند</a>
+                            <a href="#">ساعت هوشمند z66 ultra</a>
+                            <a href="#">710000</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div><img src="assets/img/zeomart/51JCCgZm7UL._AC_UX679_.jpeg"></div>
+                        <div>
+                            <a href="#">ساعت هوشمند</a>
+                            <a href="#">ساعت هوشمند z66 ultra</a>
+                            <a href="#">710000</a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+
+
+
+
+        </div>
+        <div id="furniture">
+            <div>
+                <div>مبلمان منزل</div>
+                <div>
+                    <ul>
+                        <li>برترین ها</li>
+                        <li>ساعت</li>
+                        <li>موبایل</li>
+                        <li>هدفون</li>
+                        <li>همه</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div>
+                <div><img
+                        src="assets/img/zeomart/modern-living-room-home-with-copy-space-wall-background-interior-architecture-concept-3d-illustration-rendering-1-e1690898681948.png">
+                </div>
+                <div>
+                    <div>
+                        <div><img src="assets/img/zeomart/ezgif-4-2c9db2ff46.webp"></div>
+                        <div>
+                            <a href="#">ساعت هوشمند</a>
+                            <a href="#">ساعت هوشمند z66 ultra</a>
+                            <a href="#">710000</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div><img src="assets/img/zeomart/320922bb-bed2-4344-8329-2b2578e9dff8-1.webp"></div>
+                        <div>
+                            <a href="#">ساعت هوشمند</a>
+                            <a href="#">ساعت هوشمند z66 ultra</a>
+                            <a href="#">710000</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div><img src="assets/img/zeomart/817-O0uXfNL-1.png"></div>
+                        <div>
+                            <a href="#">ساعت هوشمند</a>
+                            <a href="#">ساعت هوشمند z66 ultra</a>
+                            <a href="#">710000</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div><img src="assets/img/zeomart/ezgif-7.webp"></div>
+                        <div>
+                            <a href="#">ساعت هوشمند</a>
+                            <a href="#">ساعت هوشمند z66 ultra</a>
+                            <a href="#">710000</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div><img src="assets/img/zeomart/ezgif-5.webp"></div>
+                        <div>
+                            <a href="#">ساعت هوشمند</a>
+                            <a href="#">ساعت هوشمند z66 ultra</a>
+                            <a href="#">710000</a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+
+
+
+
+        </div>
+        <div id="beauty">
+            <div>
+                <div> آرایشی بهداشتی</div>
+                <div>
+                    <ul>
+                        <li>برترین ها</li>
+                        <li>ساعت</li>
+                        <li>موبایل</li>
+                        <li>هدفون</li>
+                        <li>همه</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div>
+                <div><img
+                        src="assets/img/zeomart/woman-body-lotion-rejuvenation-cosmetics-isolated-background-1-1-e1690898640840.png">
+                </div>
+                <div>
+                    <div>
+                        <div><img src="assets/img/zeomart/ezgif-35.webp"></div>
+                        <div>
+                            <a href="#">ساعت هوشمند</a>
+                            <a href="#">ساعت هوشمند z66 ultra</a>
+                            <a href="#">710000</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div><img src="assets/img/zeomart/712Rx84lWeL._AC_SX466_.jpeg"></div>
+                        <div>
+                            <a href="#">ساعت هوشمند</a>
+                            <a href="#">ساعت هوشمند z66 ultra</a>
+                            <a href="#">710000</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div><img src="assets/img/zeomart/ezgif-27.webp"></div>
+                        <div>
+                            <a href="#">ساعت هوشمند</a>
+                            <a href="#">ساعت هوشمند z66 ultra</a>
+                            <a href="#">710000</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div><img
+                                src="assets/img/zeomart/77afadc5-9137-4820-bc70-08fddb884075.108b99db07fe7d181c28038f5e3a213a.webp">
+                        </div>
+                        <div>
+                            <a href="#">ساعت هوشمند</a>
+                            <a href="#">ساعت هوشمند z66 ultra</a>
+                            <a href="#">710000</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div><img src="assets/img/zeomart/ezgif-25.webp"></div>
+                        <div>
+                            <a href="#">ساعت هوشمند</a>
+                            <a href="#">ساعت هوشمند z66 ultra</a>
+                            <a href="#">710000</a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+
+
+
+
+        </div>
+        <div id="clothing">
+            <div>
+                <div> پوشاک </div>
+                <div>
+                    <ul>
+                        <li>برترین ها</li>
+                        <li>ساعت</li>
+                        <li>موبایل</li>
+                        <li>هدفون</li>
+                        <li>همه</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div>
+                <div><img src="assets/img/zeomart/Group-28-e1690898852183.png"></div>
+                <div>
+                    <div>
+                        <div><img src="assets/img/zeomart/ezgif-88.webp"></div>
+                        <div>
+                            <a href="#">ساعت هوشمند</a>
+                            <a href="#">ساعت هوشمند z66 ultra</a>
+                            <a href="#">710000</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div><img src="assets/img/zeomart/ezgif-87.webp"></div>
+                        <div>
+                            <a href="#">ساعت هوشمند</a>
+                            <a href="#">ساعت هوشمند z66 ultra</a>
+                            <a href="#">710000</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div><img src="assets/img/zeomart/ezgif-22.webp"></div>
+                        <div>
+                            <a href="#">ساعت هوشمند</a>
+                            <a href="#">ساعت هوشمند z66 ultra</a>
+                            <a href="#">710000</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div><img src="assets/img/zeomart/ezgif-21.webp"></div>
+                        <div>
+                            <a href="#">ساعت هوشمند</a>
+                            <a href="#">ساعت هوشمند z66 ultra</a>
+                            <a href="#">710000</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div><img src="assets/img/zeomart/ezgif-20.webp"></div>
+                        <div>
+                            <a href="#">ساعت هوشمند</a>
+                            <a href="#">ساعت هوشمند z66 ultra</a>
+                            <a href="#">710000</a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+
+
+
+
+        </div>
+        <!-- <div class="accesory">
+            <div class="onvan">خرید براساس دسته بندی</div>
+            <div class="mohtava">
+                <div class="imge">
+                    <div class="imag"><img src="assets/img/zeomart/image_36-removebg-preview.png"></div>
+                    <div class="matn">اپل
+                        <span class="matn1">محصول16</span>
+                    </div>
+                </div>
+                <div class="imge">
+                    <div class="imag"><img src="assets/img/zeomart/image_37-removebg-preview.png"></div>
+                    <div class="matn">سامسونگ
+                        <span class="matn1">محصول16</span>
+                    </div>
+                </div>
+                <div class="imge">
+                    <div class="imag"><img src="assets/img/zeomart/image_38-removebg-preview.png"></div>
+                    <div class="matn">سونی
+                        <span class="matn1">محصول16</span>
+                    </div>
+                </div>
+                <div class="imge">
+                    <div class="imag"><img src="assets/img/zeomart/image_40-removebg-preview.png"></div>
+                    <div class="matn">دستبند
+                        <span class="matn1">محصول16</span>
+                    </div>
+                </div>
+                <div class="imge">
+                    <div class="imag"><img src="assets/img/zeomart/image_41-removebg-preview.png"></div>
+                    <div class="matn">عینک
+                        <span class="matn1">محصول16</span>
+                    </div>
+                </div>
+                <div class="imge">
+                    <div class="imag"><img src="assets/img/zeomart/image_42-removebg-preview.png"></div>
+                    <div class="matn">تیمبرلند
+                        <span class="matn1">محصول16</span>
+                    </div>
+                </div>
+                <div class="imge">
+                    <div class="imag"><img src="assets/img/zeomart/image_43-removebg-preview.png"></div>
+                    <div class="matn">شیائومی
+                        <span class="matn1">محصول16</span>
+                    </div>
+                </div>
+                <div class="imge">
+                    <div class="imag"><img src="assets/img/zeomart/image_45-removebg-preview.png"></div>
+                    <div class="matn">ریبند
+                        <span class="matn1">محصول16</span>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="accesory">
+            <div class="onvan">
+                <div class="onvan-right"> آخرین محصولات</div>
+                <div class="onvan-left">
+                    <ul>
+                        <li>برترین ها</li>
+                        <li>لوازم منزل</li>
+                        <li>ساعت</li>
+                        <li>موبایل</li>
+                        <li>همه</li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="mohtava-1">
+                <div class="imge">
+                    <div class="imag"><img src="assets/img/zeomart/ezgif-103.webp"></div>
+                    <div class="matn">اپل
+                        <span class="matn1">محصول16</span>
+                    </div>
+                </div>
+                <div class="imge">
+                    <div class="imag"><img src="assets/img/zeomart/ezgif-102.webp"></div>
+                    <div class="matn">سامسونگ
+                        <span class="matn1">محصول16</span>
+
+                    </div>
+                </div>
+                <div class="imge">
+                    <div class="imag"><img src="assets/img/zeomart/ezgif-104.webp"></div>
+                    <div class="matn">سونی
+                        <span class="matn1">محصول16</span>
+                    </div>
+                </div>
+                <div class="imge">
+                    <div class="imag"><img src="assets/img/zeomart/ezgif-101.webp"></div>
+                    <div class="matn">دستبند
+                        <span class="matn1">محصول16</span>
+                    </div>
+                </div>
+                <div class="imge">
+                    <div class="imag"><img src="assets/img/zeomart/ezgif-105.webp"></div>
+                    <div class="matn">عینک
+                        <span class="matn1">جارو</span>
+                        <span class="matn1">6.500.000</span>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div> -->
+        <div id="send">
+            <div>
+                <div><i class="fa-light fa-sign-posts fa-xl"></i></div>
+                <span>ارسال رایگان</span>
+                <span>ارسال رایگان بالای 300هزار تومان</span>
+
+            </div>
+            <div>
+                <div><i class="fa-light fa-file-import fa-xl"></i></div>
+                <span>ضمانت وجه</span>
+                <span>بازگشت وجه تا 30روز</span>
+
+            </div>
+            <div>
+                <div><i class="fa-light fa-face-smiling-hands fa-xl"></i></div>
+                <span>پشتیبانی آنلاین</span>
+                <span>24ساعت 7روز هفته</span>
+
+            </div>
+            <div>
+                <div><i class="fa-duotone fa-money-bill-1-wave fa-xl"></i></div>
+                <span>پرداخت آسان</span>
+                <span> پرداخت از طریق درگاه آنلاین </span>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+    </main>
+    <div id="befor-footer">
+        <div>تخفیف ویژه با عضویت در خبرنامه</div>
+        <div>
+            <div><input type="search" value="ایمیل شما">
+            </div>
+            <div>عضویت</div>
+        </div>
+    </div>
+
+    <div id="footer">
+
+        <div>
+            <a>تماس با ما</a>
+            <div>
+                <div><i class="fa-light fa-phone-volume fa-2xl"></i></i></div>
+                <div>
+                    <span>شنبه تا چهارشنبه:8صبح تا 6عصر</span>
+                    <span>09179170917</span>
+                </div>
+
+            </div>
+            <div>
+                <div><i class="fa-regular fa-envelope-open-text fa-2xl"></i></div>
+                <div>
+                    <span>پشتیبانی از طریق ایمیل</span>
+                    <span>support@zeaomart.com</span>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div>
+                <a>درباره ی زئومارت فارسی </a>
+                <span>رهگیری سفارش</span>
+                <span>آدرس فروشگاه</span>
+                <span>علاقه مندی ها</span>
+                <span>حریم خصوصی</span>
+            </div>
+            <div>
+                <a>درباره ی زئومارت فارسی </a>
+                <span>رهگیری سفارش</span>
+                <span>آدرس فروشگاه</span>
+                <span>علاقه مندی ها</span>
+                <span>حریم خصوصی</span>
+            </div>
+            <div>
+                <a>درباره ی زئومارت فارسی </a>
+                <span>رهگیری سفارش</span>
+                <span>آدرس فروشگاه</span>
+                <span>علاقه مندی ها</span>
+                <span>حریم خصوصی</span>
+            </div>
+
+
+
+        </div>
+        <div>
+            <div>شبکه های اجتماعی</div>
+            <div>
+                <i class="fa-brands fa-twitter fa-lg"></i>
+                <i class="fa-brands fa-skype fa-lg"></i>
+                <i class="fa-brands fa-facebook fa-lg"></i>
+                <i class="fa-solid fa-envelope fa-lg"></i>
+
+            </div>
+            <div>پرداخت از طریق</div>
+            <div>
+                <i class="fa-brands fa-cc-amazon-pay fa-lg"></i>
+                <i class="fa-duotone fa-rectangle-pro fa-lg"></i>
+                <i class="fa-sharp fa-thin fa-passport fa-lg"></i>
+                <i class="fa-brands fa-wizards-of-the-coast fa-lg"></i>
+
+            </div>
+        </div>
+
+
+
+
+    </div>
+    <script src="assets/js/jquery-3.7.1.js"></script>
+    <script src="assets/vendor/owl/owl.carousel.min.js"></script>
+    <script>
+        $("main .accesory .mohtava-1").owlCarousel({
+            "loop": true,
+            "rtl": true,
+            // outowidth: true,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            smartSpeed: 1000,
+            "dots": false,
+        
+            "responsive": {
+                0: {
+                    items: 1,
+                    nav: true
+                },
+                600: {
+                    items: 3,
+                    nav: false
+                },
+                1000: {
+                    items: 5,
+                    nav: true,
+                    loop: false
+                }
+            }
+
+        });
+
+    </script>
+
+
+
+</body>
+
+</html>
